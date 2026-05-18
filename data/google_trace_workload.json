@@ -1,0 +1,2733 @@
+[
+  {
+    "id": "GCT-3418309",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 24,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418309,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418314",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 20,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0745
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0745
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418314,
+    "data_size_gb": 1.49
+  },
+  {
+    "id": "GCT-3418319",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418319,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418324",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 21,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418324,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418329",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 14,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418329,
+    "data_size_gb": 3.0
+  },
+  {
+    "id": "GCT-3418334",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 26,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418334,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418339",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 26,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418339,
+    "data_size_gb": 25.0
+  },
+  {
+    "id": "GCT-3418356",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 30,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418356,
+    "data_size_gb": 5.0
+  },
+  {
+    "id": "GCT-3418363",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 21,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418363,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418368",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 28,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0869
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0869
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0869
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418368,
+    "data_size_gb": 2.61
+  },
+  {
+    "id": "GCT-3418375",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 16,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0928
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0928
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418375,
+    "data_size_gb": 2.86
+  },
+  {
+    "id": "GCT-3418380",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0984
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0984
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418380,
+    "data_size_gb": 1.97
+  },
+  {
+    "id": "GCT-3418385",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 12,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418385,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418390",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 21,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418390,
+    "data_size_gb": 5.0
+  },
+  {
+    "id": "GCT-3418395",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 23,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418395,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418400",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0908
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0908
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418400,
+    "data_size_gb": 1.82
+  },
+  {
+    "id": "GCT-3418405",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 11,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0928
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0928
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0928
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0928
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418405,
+    "data_size_gb": 3.71
+  },
+  {
+    "id": "GCT-3418412",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 29,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0902
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0902
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418412,
+    "data_size_gb": 1.8
+  },
+  {
+    "id": "GCT-3418417",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 24,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0911
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0911
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418417,
+    "data_size_gb": 1.82
+  },
+  {
+    "id": "GCT-3418422",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 22,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418422,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-3418427",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0869
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0869
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418427,
+    "data_size_gb": 1.74
+  },
+  {
+    "id": "GCT-3418432",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0947
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0947
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418432,
+    "data_size_gb": 1.89
+  },
+  {
+    "id": "GCT-3418437",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0949
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0949
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418437,
+    "data_size_gb": 1.9
+  },
+  {
+    "id": "GCT-3418442",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 28,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 3418442,
+    "data_size_gb": 8.0
+  },
+  {
+    "id": "GCT-6590371",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 24,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0159
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0159
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6590371,
+    "data_size_gb": 0.32
+  },
+  {
+    "id": "GCT-6590376",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 25,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.124
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.124
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6590376,
+    "data_size_gb": 2.48
+  },
+  {
+    "id": "GCT-6590381",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 18,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6590381,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-6590386",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 26,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6590386,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-6590391",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 12,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0877
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0877
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6590391,
+    "data_size_gb": 1.75
+  },
+  {
+    "id": "GCT-6724944",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 10,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6724944,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-6724949",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 21,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0847
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0847
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6724949,
+    "data_size_gb": 1.69
+  },
+  {
+    "id": "GCT-6933047",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0255
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6933047,
+    "data_size_gb": 0.26
+  },
+  {
+    "id": "GCT-6933059",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 13,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 23.7,
+        "cpu_request": 0.0687,
+        "memory_request": 0.0471
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 6933059,
+    "data_size_gb": 0.47
+  },
+  {
+    "id": "GCT-7053513",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 26,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0031
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0031
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0031
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 7053513,
+    "data_size_gb": 0.09
+  },
+  {
+    "id": "GCT-15705910",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 25,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 37.6,
+        "cpu_request": 0.1382,
+        "memory_request": 0.1041
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 15705910,
+    "data_size_gb": 1.04
+  },
+  {
+    "id": "GCT-17109330",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 12,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0978
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0978
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0978
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0978
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0978
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 17109330,
+    "data_size_gb": 167.38
+  },
+  {
+    "id": "GCT-28185708",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 357,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.008
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.008
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.008
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.008
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.008
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 28185708,
+    "data_size_gb": 0.88
+  },
+  {
+    "id": "GCT-35229152",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 22,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 35229152,
+    "data_size_gb": 3.0
+  },
+  {
+    "id": "GCT-39308684",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 21,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0862
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0862
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 39308684,
+    "data_size_gb": 1.72
+  },
+  {
+    "id": "GCT-39308688",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 24,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 39308688,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-39308692",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 24,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0916
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0916
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 39308692,
+    "data_size_gb": 1.83
+  },
+  {
+    "id": "GCT-46542951",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0776
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0776
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 46542951,
+    "data_size_gb": 1.55
+  },
+  {
+    "id": "GCT-86753913",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0155
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0155
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0155
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 86753913,
+    "data_size_gb": 0.46
+  },
+  {
+    "id": "GCT-98680993",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 15,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 98680993,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-105360316",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 13.7,
+        "cpu_request": 0.0187,
+        "memory_request": 0.0419
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 105360316,
+    "data_size_gb": 0.42
+  },
+  {
+    "id": "GCT-106664144",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 27,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 30.0,
+        "cpu_request": 0.1,
+        "memory_request": 0.1
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 106664144,
+    "data_size_gb": 2.0
+  },
+  {
+    "id": "GCT-109341524",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 29,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0992
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0992
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 109341524,
+    "data_size_gb": 1.98
+  },
+  {
+    "id": "GCT-109344935",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 10,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.014
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.014
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 109344935,
+    "data_size_gb": 0.28
+  },
+  {
+    "id": "GCT-124371644",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 13,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0906
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0906
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 124371644,
+    "data_size_gb": 1.81
+  },
+  {
+    "id": "GCT-154376113",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 26,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.0109
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 154376113,
+    "data_size_gb": 0.11
+  },
+  {
+    "id": "GCT-155171765",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 29,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0881
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0881
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 155171765,
+    "data_size_gb": 1.76
+  },
+  {
+    "id": "GCT-182939990",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 23,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0605
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0605
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0605
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 182939990,
+    "data_size_gb": 1.81
+  },
+  {
+    "id": "GCT-192299653",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 11,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0286
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0286
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0286
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0286
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0286
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 192299653,
+    "data_size_gb": 89.8
+  },
+  {
+    "id": "GCT-194963094",
+    "type": "llm_inference",
+    "priority": "BACKGROUND",
+    "deadline": 139,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0233
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 194963094,
+    "data_size_gb": 0.23
+  },
+  {
+    "id": "GCT-209193844",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 18,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0892
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0892
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 209193844,
+    "data_size_gb": 1.78
+  },
+  {
+    "id": "GCT-212499161",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 13,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 10.1,
+        "cpu_request": 0.0006,
+        "memory_request": 0.0032
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 10.1,
+        "cpu_request": 0.0006,
+        "memory_request": 0.0032
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 10.1,
+        "cpu_request": 0.0006,
+        "memory_request": 0.0032
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 10.1,
+        "cpu_request": 0.0006,
+        "memory_request": 0.0032
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 212499161,
+    "data_size_gb": 0.13
+  },
+  {
+    "id": "GCT-215723520",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0955
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 215723520,
+    "data_size_gb": 0.96
+  },
+  {
+    "id": "GCT-232736649",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 25,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0132
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0171
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0171
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 232736649,
+    "data_size_gb": 0.47
+  },
+  {
+    "id": "GCT-246757899",
+    "type": "data_preprocessing",
+    "priority": "CRITICAL",
+    "deadline": 26,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0124
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 246757899,
+    "data_size_gb": 0.12
+  },
+  {
+    "id": "GCT-259235987",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.5088
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 259235987,
+    "data_size_gb": 5.09
+  },
+  {
+    "id": "GCT-259659137",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 20,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0869
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0869
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0869
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 259659137,
+    "data_size_gb": 2.61
+  },
+  {
+    "id": "GCT-260194510",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 13,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0477
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 260194510,
+    "data_size_gb": 0.48
+  },
+  {
+    "id": "GCT-261357632",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 24,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0199
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 261357632,
+    "data_size_gb": 0.2
+  },
+  {
+    "id": "GCT-261595273",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 23,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0974
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 261595273,
+    "data_size_gb": 0.97
+  },
+  {
+    "id": "GCT-287653404",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 30,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 35.0,
+        "cpu_request": 0.125,
+        "memory_request": 0.0477
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 287653404,
+    "data_size_gb": 0.48
+  },
+  {
+    "id": "GCT-292046988",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 19,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0233
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 292046988,
+    "data_size_gb": 0.23
+  },
+  {
+    "id": "GCT-296756903",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 296,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0233
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 296756903,
+    "data_size_gb": 0.23
+  },
+  {
+    "id": "GCT-307306810",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 28,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 18.8,
+        "cpu_request": 0.0438,
+        "memory_request": 0.0101
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 18.8,
+        "cpu_request": 0.0438,
+        "memory_request": 0.0101
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 18.8,
+        "cpu_request": 0.0438,
+        "memory_request": 0.0101
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 18.8,
+        "cpu_request": 0.0438,
+        "memory_request": 0.0101
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 307306810,
+    "data_size_gb": 0.4
+  },
+  {
+    "id": "GCT-315551614",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0498
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0498
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 315551614,
+    "data_size_gb": 1.0
+  },
+  {
+    "id": "GCT-318504156",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 14,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0466
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 318504156,
+    "data_size_gb": 0.47
+  },
+  {
+    "id": "GCT-331416465",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 24,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0895
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0895
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0895
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0895
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 47.5,
+        "cpu_request": 0.1875,
+        "memory_request": 0.0895
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 331416465,
+    "data_size_gb": 63.06
+  },
+  {
+    "id": "GCT-341499666",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 16,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 18.8,
+        "cpu_request": 0.0438,
+        "memory_request": 0.0062
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 341499666,
+    "data_size_gb": 0.06
+  },
+  {
+    "id": "GCT-350775748",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0078
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0078
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0078
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0078
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 350775748,
+    "data_size_gb": 0.31
+  },
+  {
+    "id": "GCT-358933853",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 294,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0233
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 358933853,
+    "data_size_gb": 0.23
+  },
+  {
+    "id": "GCT-358933855",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 333,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0155
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 358933855,
+    "data_size_gb": 0.15
+  },
+  {
+    "id": "GCT-370237482",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 23,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0636
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 370237482,
+    "data_size_gb": 0.64
+  },
+  {
+    "id": "GCT-384861629",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 26,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0009
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0009
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0009
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0009
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0009
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 384861629,
+    "data_size_gb": 0.04
+  },
+  {
+    "id": "GCT-411248937",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 15,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 34.9,
+        "cpu_request": 0.1244,
+        "memory_request": 0.1113
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 411248937,
+    "data_size_gb": 1.11
+  },
+  {
+    "id": "GCT-430861762",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 10,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 10.4,
+        "cpu_request": 0.0019,
+        "memory_request": 0.0124
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 430861762,
+    "data_size_gb": 0.12
+  },
+  {
+    "id": "GCT-437863928",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 13,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0016
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0016
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0016
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 437863928,
+    "data_size_gb": 0.05
+  },
+  {
+    "id": "GCT-437863935",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 14,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0016
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0016
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0016
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 437863935,
+    "data_size_gb": 0.05
+  },
+  {
+    "id": "GCT-437863939",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 30,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0023
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0023
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0023
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 437863939,
+    "data_size_gb": 0.07
+  },
+  {
+    "id": "GCT-447689838",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 20,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 10.4,
+        "cpu_request": 0.0019,
+        "memory_request": 0.0159
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 447689838,
+    "data_size_gb": 0.16
+  },
+  {
+    "id": "GCT-447971550",
+    "type": "llm_inference",
+    "priority": "BACKGROUND",
+    "deadline": 320,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0159
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0159
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 447971550,
+    "data_size_gb": 0.32
+  },
+  {
+    "id": "GCT-494787089",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 10,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0264
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0264
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0264
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0264
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0264
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 494787089,
+    "data_size_gb": 2.64
+  },
+  {
+    "id": "GCT-494787097",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 11,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0078
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0078
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0078
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0078
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 12.5,
+        "cpu_request": 0.0125,
+        "memory_request": 0.0078
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 494787097,
+    "data_size_gb": 0.47
+  },
+  {
+    "id": "GCT-498778363",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 456,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 17.5,
+        "cpu_request": 0.0375,
+        "memory_request": 0.0326
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 498778363,
+    "data_size_gb": 0.33
+  },
+  {
+    "id": "GCT-501114088",
+    "type": "batch_prediction",
+    "priority": "BACKGROUND",
+    "deadline": 434,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0043
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0043
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0043
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0043
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0043
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 501114088,
+    "data_size_gb": 0.43
+  },
+  {
+    "id": "GCT-515042954",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 356,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 54.4,
+        "cpu_request": 0.2219,
+        "memory_request": 0.021
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 41.9,
+        "cpu_request": 0.1594,
+        "memory_request": 0.021
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 41.9,
+        "cpu_request": 0.1594,
+        "memory_request": 0.021
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 41.9,
+        "cpu_request": 0.1594,
+        "memory_request": 0.021
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 33.1,
+        "cpu_request": 0.1156,
+        "memory_request": 0.021
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 515042954,
+    "data_size_gb": 5.67
+  },
+  {
+    "id": "GCT-515042969",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 386,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.0155
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.0155
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.0155
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.0155
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 13.1,
+        "cpu_request": 0.0156,
+        "memory_request": 0.0155
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 515042969,
+    "data_size_gb": 755.32
+  },
+  {
+    "id": "GCT-516580766",
+    "type": "llm_inference",
+    "priority": "CRITICAL",
+    "deadline": 20,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 45.4,
+        "cpu_request": 0.1772,
+        "memory_request": 0.0233
+      },
+      {
+        "name": "task_1",
+        "priority": 1,
+        "duration": 45.4,
+        "cpu_request": 0.1772,
+        "memory_request": 0.0233
+      },
+      {
+        "name": "task_2",
+        "priority": 2,
+        "duration": 45.4,
+        "cpu_request": 0.1772,
+        "memory_request": 0.0233
+      },
+      {
+        "name": "task_3",
+        "priority": 3,
+        "duration": 45.4,
+        "cpu_request": 0.1772,
+        "memory_request": 0.0233
+      },
+      {
+        "name": "task_4",
+        "priority": 4,
+        "duration": 45.4,
+        "cpu_request": 0.1772,
+        "memory_request": 0.0233
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 516580766,
+    "data_size_gb": 3.49
+  },
+  {
+    "id": "GCT-516580966",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 17,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0159
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 516580966,
+    "data_size_gb": 0.16
+  },
+  {
+    "id": "GCT-519524647",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 16,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0233
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 519524647,
+    "data_size_gb": 0.23
+  },
+  {
+    "id": "GCT-519524649",
+    "type": "model_training",
+    "priority": "CRITICAL",
+    "deadline": 27,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 22.5,
+        "cpu_request": 0.0625,
+        "memory_request": 0.0078
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 519524649,
+    "data_size_gb": 0.08
+  },
+  {
+    "id": "GCT-532613684",
+    "type": "batch_prediction",
+    "priority": "BACKGROUND",
+    "deadline": 252,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 10.1,
+        "cpu_request": 0.0006,
+        "memory_request": 0.0016
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 532613684,
+    "data_size_gb": 0.02
+  },
+  {
+    "id": "GCT-595842024",
+    "type": "batch_prediction",
+    "priority": "BACKGROUND",
+    "deadline": 468,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 16.2,
+        "cpu_request": 0.0312,
+        "memory_request": 0.0233
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 595842024,
+    "data_size_gb": 0.23
+  },
+  {
+    "id": "GCT-609252510",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 276,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0025
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 609252510,
+    "data_size_gb": 0.03
+  },
+  {
+    "id": "GCT-609252512",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 172,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0025
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 609252512,
+    "data_size_gb": 0.03
+  },
+  {
+    "id": "GCT-609252514",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 305,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0025
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 609252514,
+    "data_size_gb": 0.03
+  },
+  {
+    "id": "GCT-609252516",
+    "type": "model_training",
+    "priority": "BACKGROUND",
+    "deadline": 231,
+    "tasks": [
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0025
+      },
+      {
+        "name": "task_0",
+        "priority": 0,
+        "duration": 11.2,
+        "cpu_request": 0.0062,
+        "memory_request": 0.0025
+      }
+    ],
+    "source": "Google_Cluster_Trace_2011",
+    "original_job_id": 609252516,
+    "data_size_gb": 0.05
+  }
+]
