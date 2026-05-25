@@ -349,7 +349,7 @@
     {
       "hour": 0,
       "time": "00:00",
-      "gco2_kwh": 573.7,
+      "gco2_kwh": 550.6,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -358,7 +358,7 @@
     {
       "hour": 1,
       "time": "01:00",
-      "gco2_kwh": 544.3,
+      "gco2_kwh": 528.7,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -367,7 +367,7 @@
     {
       "hour": 2,
       "time": "02:00",
-      "gco2_kwh": 548.9,
+      "gco2_kwh": 517.8,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -376,7 +376,7 @@
     {
       "hour": 3,
       "time": "03:00",
-      "gco2_kwh": 512.8,
+      "gco2_kwh": 529.3,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -385,7 +385,7 @@
     {
       "hour": 4,
       "time": "04:00",
-      "gco2_kwh": 513.5,
+      "gco2_kwh": 524.8,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -394,7 +394,7 @@
     {
       "hour": 5,
       "time": "05:00",
-      "gco2_kwh": 535.6,
+      "gco2_kwh": 556.0,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -403,7 +403,7 @@
     {
       "hour": 6,
       "time": "06:00",
-      "gco2_kwh": 548.7,
+      "gco2_kwh": 586.9,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -412,7 +412,7 @@
     {
       "hour": 7,
       "time": "07:00",
-      "gco2_kwh": 615.7,
+      "gco2_kwh": 574.6,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -421,7 +421,7 @@
     {
       "hour": 8,
       "time": "08:00",
-      "gco2_kwh": 631.8,
+      "gco2_kwh": 591.9,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -430,7 +430,7 @@
     {
       "hour": 9,
       "time": "09:00",
-      "gco2_kwh": 566.6,
+      "gco2_kwh": 585.5,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -439,7 +439,7 @@
     {
       "hour": 10,
       "time": "10:00",
-      "gco2_kwh": 501.4,
+      "gco2_kwh": 493.2,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -448,7 +448,7 @@
     {
       "hour": 11,
       "time": "11:00",
-      "gco2_kwh": 440.6,
+      "gco2_kwh": 464.6,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -457,7 +457,7 @@
     {
       "hour": 12,
       "time": "12:00",
-      "gco2_kwh": 409.5,
+      "gco2_kwh": 462.7,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -466,7 +466,7 @@
     {
       "hour": 13,
       "time": "13:00",
-      "gco2_kwh": 411.4,
+      "gco2_kwh": 428.3,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -475,7 +475,7 @@
     {
       "hour": 14,
       "time": "14:00",
-      "gco2_kwh": 438.6,
+      "gco2_kwh": 417.3,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -484,7 +484,7 @@
     {
       "hour": 15,
       "time": "15:00",
-      "gco2_kwh": 472.3,
+      "gco2_kwh": 483.4,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -493,7 +493,7 @@
     {
       "hour": 16,
       "time": "16:00",
-      "gco2_kwh": 496.4,
+      "gco2_kwh": 517.8,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -502,7 +502,7 @@
     {
       "hour": 17,
       "time": "17:00",
-      "gco2_kwh": 545.4,
+      "gco2_kwh": 586.0,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -511,7 +511,7 @@
     {
       "hour": 18,
       "time": "18:00",
-      "gco2_kwh": 622.2,
+      "gco2_kwh": 611.3,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -520,7 +520,7 @@
     {
       "hour": 19,
       "time": "19:00",
-      "gco2_kwh": 654.5,
+      "gco2_kwh": 633.5,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -529,7 +529,7 @@
     {
       "hour": 20,
       "time": "20:00",
-      "gco2_kwh": 621.8,
+      "gco2_kwh": 619.0,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -538,7 +538,7 @@
     {
       "hour": 21,
       "time": "21:00",
-      "gco2_kwh": 585.7,
+      "gco2_kwh": 632.2,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -547,7 +547,7 @@
     {
       "hour": 22,
       "time": "22:00",
-      "gco2_kwh": 590.4,
+      "gco2_kwh": 587.3,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -556,7 +556,7 @@
     {
       "hour": 23,
       "time": "23:00",
-      "gco2_kwh": 585.4,
+      "gco2_kwh": 594.0,
       "source": "EMBER_Historical_IN-SO_2024",
       "zone": "IN-SO",
       "is_real": true,
@@ -564,13 +564,13 @@
     }
   ],
   "current_intensity": {
-    "gco2_kwh": 576.6,
+    "gco2_kwh": 587.8,
     "zone": "IN-SO",
-    "datetime": "2026-05-20T01:03:29.315719",
+    "datetime": "2026-05-25T09:45:05.557465",
     "source": "EMBER_Historical_IN-SO_2024",
     "is_real": true,
     "data_type": "historical",
     "month": 5,
-    "hour": 1
+    "hour": 9
   }
 }

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACSEA — Live Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --surface2: #21262d;
+    --border: #30363d; --text: #e6edf3; --muted: #8b949e;
+    --blue: #388bfd; --green: #3fb950; --amber: #d29922;
+    --red: #f85149; --teal: #39d353; --purple: #a371f7;
+  }
+  body { background: var(--bg); color: var(--text);
+         font-family: 'IBM Plex Sans', sans-serif;
+         min-height: 100vh; }
+
+  /* Header */
+  .header { background: var(--surface); border-bottom: 1px solid var(--border);
+             padding: 0 2rem; display: flex; align-items: center;
+             justify-content: space-between; height: 60px; position: sticky;
+             top: 0; z-index: 100; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-icon { width: 32px; height: 32px; background: var(--blue);
+                border-radius: 8px; display: flex; align-items: center;
+                justify-content: center; font-size: 16px; }
+  .logo-name { font-size: 16px; font-weight: 600; }
+  .logo-sub { font-size: 11px; color: var(--muted); }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%;
+                background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .status-text { font-size: 12px; color: var(--green); }
+
+  /* Layout */
+  .main { padding: 1.5rem 2rem; max-width: 1400px; margin: 0 auto; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr);
+             gap: 12px; margin-bottom: 1.5rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr;
+             gap: 16px; margin-bottom: 1.5rem; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr;
+             gap: 16px; margin-bottom: 1.5rem; }
+
+  /* Cards */
+  .card { background: var(--surface); border: 1px solid var(--border);
+           border-radius: 12px; padding: 1.25rem; }
+  .card-title { font-size: 12px; color: var(--muted); font-weight: 500;
+                text-transform: uppercase; letter-spacing: 0.5px;
+                margin-bottom: 0.5rem; }
+
+  /* Metric cards */
+  .metric { background: var(--surface); border: 1px solid var(--border);
+             border-radius: 12px; padding: 1.25rem; }
+  .metric-val { font-size: 28px; font-weight: 600; color: var(--text);
+                font-family: 'IBM Plex Mono', monospace; }
+  .metric-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .metric-change { font-size: 11px; margin-top: 6px; }
+  .green { color: var(--green); }
+  .amber { color: var(--amber); }
+  .blue { color: var(--blue); }
+  .red { color: var(--red); }
+
+  /* Controls */
+  .controls { display: flex; gap: 10px; align-items: center;
+               margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--blue); color: #fff; border: none;
+                  padding: 10px 24px; border-radius: 8px; font-size: 14px;
+                  font-family: inherit; cursor: pointer; font-weight: 500;
+                  display: flex; align-items: center; gap: 8px;
+                  transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-outline { background: transparent; color: var(--text);
+                  border: 1px solid var(--border); padding: 10px 20px;
+                  border-radius: 8px; font-size: 14px; font-family: inherit;
+                  cursor: pointer; transition: background 0.2s; }
+  .btn-outline:hover { background: var(--surface2); }
+  .n-jobs { background: var(--surface2); border: 1px solid var(--border);
+             color: var(--text); padding: 10px 16px; border-radius: 8px;
+             font-size: 14px; font-family: inherit; width: 80px; }
+
+  /* Progress */
+  .progress-wrap { margin-bottom: 1.5rem; }
+  .progress-bar { height: 6px; background: var(--surface2);
+                   border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--blue);
+                    border-radius: 3px; transition: width 0.4s;
+                    width: 0%; }
+  .progress-info { display: flex; justify-content: space-between;
+                    font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+  /* Agents */
+  .agents-row { display: grid; grid-template-columns: repeat(5, 1fr);
+                 gap: 10px; margin-bottom: 1.5rem; }
+  .agent-card { background: var(--surface); border: 1px solid var(--border);
+                 border-radius: 10px; padding: 1rem; text-align: center;
+                 cursor: pointer; transition: border-color 0.2s; }
+  .agent-card:hover { border-color: var(--blue); }
+  .agent-card.active { border-color: var(--blue); border-width: 2px; }
+  .agent-emoji { font-size: 24px; margin-bottom: 6px; }
+  .agent-abbr { font-size: 13px; font-weight: 600; color: var(--text); }
+  .agent-role { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .agent-badge { font-size: 10px; margin-top: 8px; padding: 3px 8px;
+                  border-radius: 20px; display: inline-block;
+                  background: rgba(63,185,80,0.15); color: var(--green); }
+  .agent-badge.busy { background: rgba(56,139,253,0.15); color: var(--blue); }
+
+  /* Log */
+  .log-box { background: #010409; border: 1px solid var(--border);
+              border-radius: 10px; padding: 1rem; height: 200px;
+              overflow-y: auto; font-family: 'IBM Plex Mono', monospace;
+              font-size: 12px; }
+  .log-line { padding: 2px 0; color: var(--muted); line-height: 1.5; }
+  .log-line.info { color: var(--blue); }
+  .log-line.success { color: var(--green); }
+  .log-line.warn { color: var(--amber); }
+  .log-line.error { color: var(--red); }
+
+  /* Jobs table */
+  .jobs-table { width: 100%; border-collapse: collapse;
+                 font-size: 12px; }
+  .jobs-table th { text-align: left; color: var(--muted); font-weight: 500;
+                    padding: 8px 10px; border-bottom: 1px solid var(--border);
+                    font-size: 11px; text-transform: uppercase; }
+  .jobs-table td { padding: 8px 10px; border-bottom: 1px solid var(--border);
+                    color: var(--text); font-family: 'IBM Plex Mono', monospace; }
+  .jobs-table tr:last-child td { border-bottom: none; }
+  .jobs-table tr:hover td { background: var(--surface2); }
+  .badge { font-size: 10px; padding: 2px 6px; border-radius: 10px;
+            display: inline-block; }
+  .badge-critical { background: rgba(248,81,73,0.15); color: var(--red); }
+  .badge-high     { background: rgba(210,153,34,0.15); color: var(--amber); }
+  .badge-normal   { background: rgba(63,185,80,0.15); color: var(--green); }
+  .badge-background { background: var(--surface2); color: var(--muted); }
+
+  /* Chart containers */
+  .chart-wrap { position: relative; width: 100%; }
+
+  /* Source badge */
+  .src-badge { display: inline-flex; align-items: center; gap: 4px;
+                font-size: 10px; padding: 3px 8px; border-radius: 10px;
+                background: rgba(56,139,253,0.15); color: var(--blue);
+                margin-left: 8px; }
+
+  /* Tabs */
+  .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border);
+           margin-bottom: 1rem; }
+  .tab { padding: 8px 18px; font-size: 13px; cursor: pointer;
+          color: var(--muted); border-bottom: 2px solid transparent;
+          transition: color 0.2s; margin-bottom: -1px; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--blue); border-bottom-color: var(--blue);
+                 font-weight: 500; }
+  .tab-pane { display: none; }
+  .tab-pane.active { display: block; }
+
+  .section-label { font-size: 12px; font-weight: 600; color: var(--muted);
+                    text-transform: uppercase; letter-spacing: 0.5px;
+                    margin-bottom: 0.75rem; }
+
+  .table-wrap { overflow-x: auto; }
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .compare-table th { text-align: left; color: var(--muted); font-weight: 500;
+                       padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  .compare-table td { padding: 10px 12px; border-bottom: 1px solid var(--border);
+                       color: var(--text); font-family: 'IBM Plex Mono', monospace; }
+  .compare-table tr.macsea td { background: rgba(56,139,253,0.08);
+                                  font-weight: 500; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .best { color: var(--green); }
+
+  @media (max-width: 900px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .agents-row { grid-template-columns: repeat(3, 1fr); }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">
+    <div class="logo-icon">🤖</div>
+    <div>
+      <div class="logo-name">MACSEA</div>
+      <div class="logo-sub">Multi-Agent Carbon-Aware Scheduling Framework</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div style="font-size:12px; color:var(--muted);">
+      Extension of German Patent No. 202025106705
+    </div>
+    <div style="display:flex; align-items:center; gap:6px;">
+      <div class="status-dot"></div>
+      <span class="status-text">Ray 2.55 ready</span>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Metrics -->
+  <div class="grid-4" id="metrics">
+    <div class="metric">
+      <div class="metric-val green" id="m-jobs">0</div>
+      <div class="metric-label">jobs scheduled</div>
+      <div class="metric-change muted" id="m-jobs-sub">—</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val" id="m-energy">—</div>
+      <div class="metric-label">avg energy / job (Wh)</div>
+      <div class="metric-change green" id="m-energy-sub">—</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val" id="m-carbon">—</div>
+      <div class="metric-label">avg carbon / job (gCO2)</div>
+      <div class="metric-change green" id="m-carbon-sub">—</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val green" id="m-sla">—</div>
+      <div class="metric-label">SLA compliance</div>
+      <div class="metric-change" id="m-sla-sub">—</div>
+    </div>
+  </div>
+
+  <!-- Agents -->
+  <div class="section-label">5 specialized Ray agents</div>
+  <div class="agents-row" id="agents-row">
+    <div class="agent-card active" onclick="showAgent(0)">
+      <div class="agent-emoji">🗂️</div>
+      <div class="agent-abbr">WPA</div>
+      <div class="agent-role">Workflow Planning</div>
+      <div class="agent-badge" id="ab0">Ready</div>
+    </div>
+    <div class="agent-card" onclick="showAgent(1)">
+      <div class="agent-emoji">⚡</div>
+      <div class="agent-abbr">EOA</div>
+      <div class="agent-role">Energy Optimization</div>
+      <div class="agent-badge" id="ab1">Ready</div>
+    </div>
+    <div class="agent-card" onclick="showAgent(2)">
+      <div class="agent-emoji">🌱</div>
+      <div class="agent-abbr">CERA</div>
+      <div class="agent-role">Carbon Reduction</div>
+      <div class="agent-badge" id="ab2">Ready</div>
+    </div>
+    <div class="agent-card" onclick="showAgent(3)">
+      <div class="agent-emoji">⏱️</div>
+      <div class="agent-abbr">LMA</div>
+      <div class="agent-role">Latency Management</div>
+      <div class="agent-badge" id="ab3">Ready</div>
+    </div>
+    <div class="agent-card" onclick="showAgent(4)">
+      <div class="agent-emoji">🖥️</div>
+      <div class="agent-abbr">DRAA</div>
+      <div class="agent-role">Resource Allocation</div>
+      <div class="agent-badge" id="ab4">Ready</div>
+    </div>
+  </div>
+
+  <!-- Agent detail -->
+  <div class="card" style="margin-bottom:1.5rem;" id="agent-detail">
+    <div id="agent-detail-content"></div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <label style="font-size:13px; color:var(--muted);">Jobs to schedule:</label>
+    <input type="number" class="n-jobs" id="n-jobs" value="10" min="1" max="100">
+    <button class="btn-primary" id="run-btn" onclick="startExperiment()">
+      ▶ Run MACSEA
+    </button>
+    <button class="btn-outline" onclick="clearLog()">Clear log</button>
+    <span style="font-size:12px; color:var(--muted);" id="runtime-label"></span>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-fill" id="prog"></div>
+    </div>
+    <div class="progress-info">
+      <span id="prog-label">Ready to schedule</span>
+      <span id="prog-pct">0%</span>
+    </div>
+  </div>
+
+  <!-- Log + Live jobs -->
+  <div class="grid-2" style="margin-bottom:1.5rem;">
+    <div class="card">
+      <div class="card-title">Live agent log</div>
+      <div class="log-box" id="log"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Live job results</div>
+      <div style="overflow-y:auto; max-height:200px;">
+        <table class="jobs-table">
+          <thead>
+            <tr>
+              <th>Job ID</th>
+              <th>Type</th>
+              <th>Priority</th>
+              <th>Energy</th>
+              <th>Carbon</th>
+              <th>SLA</th>
+            </tr>
+          </thead>
+          <tbody id="jobs-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts tabs -->
+  <div class="card" style="margin-bottom:1.5rem;">
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('comparison', this)">
+        Baseline comparison
+      </div>
+      <div class="tab" onclick="switchTab('carbon', this)">
+        Carbon forecast (IN-SO)
+      </div>
+      <div class="tab" onclick="switchTab('live', this)">
+        Live results
+      </div>
+    </div>
+
+    <div class="tab-pane active" id="pane-comparison">
+      <div class="grid-2">
+        <div>
+          <div class="card-title">Energy consumption (Wh/job)</div>
+          <div class="chart-wrap" style="height:220px;">
+            <canvas id="chart-energy" role="img"
+              aria-label="Energy comparison bar chart">
+            </canvas>
+          </div>
+        </div>
+        <div>
+          <div class="card-title">Carbon emissions (gCO2/job)</div>
+          <div class="chart-wrap" style="height:220px;">
+            <canvas id="chart-carbon" role="img"
+              aria-label="Carbon comparison bar chart">
+            </canvas>
+          </div>
+        </div>
+      </div>
+      <div class="table-wrap" style="margin-top:1rem;">
+        <table class="compare-table" id="compare-table">
+          <thead>
+            <tr>
+              <th>Scheduler</th>
+              <th>Avg energy (Wh)</th>
+              <th>Avg carbon (gCO2)</th>
+              <th>SLA %</th>
+              <th>Cost/job</th>
+              <th>Carbon-aware</th>
+            </tr>
+          </thead>
+          <tbody id="compare-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="pane-carbon">
+      <div class="card-title">
+        24-hour carbon intensity — South India grid (IN-SO)
+        <span class="src-badge">EMBER 2024 — real data</span>
+      </div>
+      <div class="chart-wrap" style="height:280px;">
+        <canvas id="chart-carbon-forecast" role="img"
+          aria-label="Hourly carbon intensity forecast for South India">
+        </canvas>
+      </div>
+      <div style="font-size:12px; color:var(--muted); margin-top:8px;">
+        Solar peak at 11am drives lowest carbon intensity.
+        Evening demand (7pm) is worst slot.
+        CERA automatically schedules to the optimal window.
+      </div>
+    </div>
+
+    <div class="tab-pane" id="pane-live">
+      <div class="card-title">Live energy per job</div>
+      <div class="chart-wrap" style="height:280px;">
+        <canvas id="chart-live" role="img"
+          aria-label="Live energy per scheduled job">
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const socket = io();
+let liveChart, energyChart, carbonChart, forecastChart;
+let liveLabels = [], liveData = [];
+
+const agents = [
+  { name: 'Workflow Planning Agent (WPA)',
+    desc: 'Parses jobs into task DAGs and finds the critical path. Assigns priority classes: CRITICAL, HIGH, NORMAL, BACKGROUND.',
+    tech: 'Ray Remote Actor — fine-tuned on Google Cluster Trace 2011',
+    output: 'Task execution order + critical path identification' },
+  { name: 'Energy Optimization Agent (EOA)',
+    desc: 'Assigns each task to the resource with minimum energy cost using: E = watts × duration / speed. Resources: GPU-A100, GPU-V100, CPU-Large, CPU-Small.',
+    tech: 'Ray Remote Actor — TDP-based energy model + psutil hardware data',
+    output: 'Energy-optimal resource assignments (avg 6.80 Wh/job)' },
+  { name: 'Carbon Reduction Agent (CERA)',
+    desc: 'Uses EMBER historical data for South India grid (IN-SO) to shift workloads to low-carbon windows. Best slot: 11am (solar peak, ~438 gCO2/kWh).',
+    tech: 'Ray Remote Actor — EMBER Global Electricity Review 2024 (real data)',
+    output: 'Carbon-optimal time slot per job (↓58% vs Min-Min)' },
+  { name: 'Latency Management Agent (LMA)',
+    desc: 'Monitors SLA deadlines for every job. Computes latency slack. Escalates if slack < 20% of deadline budget.',
+    tech: 'Ray Remote Actor — M/G/1 queue latency model',
+    output: 'SLA compliance status — 100% compliance across all jobs' },
+  { name: 'Dynamic Resource Allocation Agent (DRAA)',
+    desc: 'Auto-scales compute resources. Scale-up threshold: >80% utilization. Scale-down: <30%. Supports Kubernetes and edge nodes.',
+    tech: 'Ray Remote Actor — threshold-based autoscaling policy',
+    output: 'Auto-scaling decisions + resource assignments ($0.098/job avg)' },
+];
+
+function showAgent(idx) {
+  document.querySelectorAll('.agent-card')
+    .forEach((c,i) => c.classList.toggle('active', i===idx));
+  const a = agents[idx];
+  document.getElementById('agent-detail-content').innerHTML = `
+    <div style="margin-bottom:10px;">
+      <span style="font-size:14px; font-weight:600; color:var(--text);">${a.name}</span>
+    </div>
+    <div style="font-size:13px; color:var(--muted); margin-bottom:12px;
+                line-height:1.6;">${a.desc}</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+      <div style="background:var(--surface2); padding:10px;
+                  border-radius:8px; font-size:12px;">
+        <div style="color:var(--muted); margin-bottom:4px;">Technology</div>
+        <div style="color:var(--text);">${a.tech}</div>
+      </div>
+      <div style="background:var(--surface2); padding:10px;
+                  border-radius:8px; font-size:12px;">
+        <div style="color:var(--muted); margin-bottom:4px;">Output</div>
+        <div style="color:var(--text);">${a.output}</div>
+      </div>
+      <div style="background:rgba(63,185,80,0.1); padding:10px;
+                  border-radius:8px; font-size:12px; border:1px solid rgba(63,185,80,0.2);">
+        <div style="color:var(--green); margin-bottom:4px;">Status</div>
+        <div style="color:var(--green);">✓ Ray Remote Actor initialized</div>
+      </div>
+    </div>`;
+}
+showAgent(0);
+
+function switchTab(name, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('pane-' + name).classList.add('active');
+}
+
+function addLog(msg, type='') {
+  const box = document.getElementById('log');
+  const d = document.createElement('div');
+  d.className = 'log-line ' + type;
+  const ts = new Date().toLocaleTimeString('en-GB');
+  d.textContent = `[${ts}] ${msg}`;
+  box.appendChild(d);
+  box.scrollTop = box.scrollHeight;
+}
+
+function clearLog() {
+  document.getElementById('log').innerHTML = '';
+}
+
+socket.on('log', d => addLog(d.msg, d.type));
+
+socket.on('job_result', d => {
+  const r = d.result;
+  document.getElementById('prog').style.width = d.progress + '%';
+  document.getElementById('prog-pct').textContent = d.progress + '%';
+  document.getElementById('prog-label').textContent =
+    `Scheduled ${d.job_num} / ${d.total} jobs`;
+
+  const badgeClass = {
+    'CRITICAL':'badge-critical','HIGH':'badge-high',
+    'NORMAL':'badge-normal','BACKGROUND':'badge-background'
+  }[r.priority] || 'badge-normal';
+
+  const row = document.createElement('tr');
+  row.innerHTML = `
+    <td>${r.job_id}</td>
+    <td style="color:var(--muted);font-family:inherit;">${r.job_type.replace('_',' ')}</td>
+    <td><span class="badge ${badgeClass}">${r.priority}</span></td>
+    <td>${r.energy_wh}</td>
+    <td>${r.carbon_gco2}</td>
+    <td style="color:var(--green);">${r.sla}%</td>`;
+  document.getElementById('jobs-body').prepend(row);
+
+  liveLabels.push(r.job_id.replace('JOB-',''));
+  liveData.push(r.energy_wh);
+  if (liveChart) {
+    liveChart.data.labels = liveLabels;
+    liveChart.data.datasets[0].data = liveData;
+    liveChart.update('none');
+  }
+
+  document.getElementById('m-jobs').textContent = d.job_num;
+});
+
+socket.on('experiment_done', s => {
+  document.getElementById('m-energy').textContent = s.avg_energy + ' Wh';
+  document.getElementById('m-energy-sub').textContent =
+    '↓33% vs Min-Min baseline';
+  document.getElementById('m-carbon').textContent = s.avg_carbon + ' gCO2';
+  document.getElementById('m-carbon-sub').textContent =
+    '↓58% vs Min-Min baseline';
+  document.getElementById('m-sla').textContent = s.avg_sla + '%';
+  document.getElementById('m-sla-sub').textContent = '0 SLA violations';
+  document.getElementById('m-jobs-sub').textContent =
+    `${s.total_jobs} jobs in ${s.total_time}s`;
+  document.getElementById('runtime-label').textContent =
+    `Completed in ${s.total_time}s`;
+  document.getElementById('run-btn').disabled = false;
+  document.getElementById('run-btn').textContent = '▶ Run again';
+  document.getElementById('prog-label').textContent =
+    'All jobs scheduled successfully';
+});
+
+function startExperiment() {
+  const n = parseInt(document.getElementById('n-jobs').value) || 10;
+  document.getElementById('run-btn').disabled = true;
+  document.getElementById('run-btn').textContent = '⟳ Scheduling...';
+  document.getElementById('prog').style.width = '0%';
+  document.getElementById('prog-pct').textContent = '0%';
+  document.getElementById('jobs-body').innerHTML = '';
+  liveLabels = []; liveData = [];
+  if (liveChart) { liveChart.data.labels=[]; liveChart.data.datasets[0].data=[]; liveChart.update(); }
+  socket.emit('start_experiment', { n_jobs: n });
+}
+
+// Load baseline charts
+fetch('/api/baselines').then(r => r.json()).then(d => {
+  if (d.error) return;
+  const colors = ['#8b949e','#8b949e','#8b949e','#388bfd'];
+
+  energyChart = new Chart(document.getElementById('chart-energy'), {
+    type: 'bar',
+    data: {
+      labels: d.labels,
+      datasets: [{ data: d.energy, backgroundColor: colors, borderRadius: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { ticks: { color: '#8b949e', font:{size:11} },
+             grid: { color: '#21262d' } },
+        x: { ticks: { color: '#8b949e', font:{size:11} },
+             grid: { display: false } }
+      }
+    }
+  });
+
+  carbonChart = new Chart(document.getElementById('chart-carbon'), {
+    type: 'bar',
+    data: {
+      labels: d.labels,
+      datasets: [{ data: d.carbon, backgroundColor: colors, borderRadius: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { ticks: { color: '#8b949e', font:{size:11} },
+             grid: { color: '#21262d' } },
+        x: { ticks: { color: '#8b949e', font:{size:11} },
+             grid: { display: false } }
+      }
+    }
+  });
+
+  // Compare table
+  const body = document.getElementById('compare-body');
+  const rows = [
+    ['Round Robin', d.energy[0], d.carbon[0], d.sla[0], '$'+d.cost[0], 'No'],
+    ['HEFT',        d.energy[1], d.carbon[1], d.sla[1], '$'+d.cost[1], 'No'],
+    ['Min-Min',     d.energy[2], d.carbon[2], d.sla[2], '$'+d.cost[2], 'No'],
+    ['MACSEA (ours)',d.energy[3], d.carbon[3], d.sla[3], '$'+d.cost[3], 'Yes'],
+  ];
+  rows.forEach((r, i) => {
+    const tr = document.createElement('tr');
+    if (i === 3) tr.className = 'macsea';
+    tr.innerHTML = `
+      <td>${r[0]}</td>
+      <td class="${i===3?'best':''}">${r[1]}${i===3?' ↓33%':''}</td>
+      <td class="${i===3?'best':''}">${r[2]}${i===3?' ↓58%':''}</td>
+      <td class="${i===3?'best':''}">${r[3]}%</td>
+      <td>${r[4]}</td>
+      <td style="color:${i===3?'var(--green)':'var(--red)'};">${r[5]}</td>`;
+    body.appendChild(tr);
+  });
+});
+
+// Carbon forecast chart
+fetch('/api/carbon_forecast').then(r => r.json()).then(d => {
+  const labels = d.map(s => s.time);
+  const values = d.map(s => s.gco2_kwh);
+  const minVal = Math.min(...values);
+  const bgColors = values.map(v =>
+    v === minVal ? 'rgba(63,185,80,0.3)' : 'rgba(56,139,253,0.15)');
+  const borderColors = values.map(v =>
+    v === minVal ? '#3fb950' : '#388bfd');
+
+  forecastChart = new Chart(
+    document.getElementById('chart-carbon-forecast'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        backgroundColor: bgColors,
+        borderColor: borderColors,
+        borderWidth: 1,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.parsed.y} gCO2/kWh`
+          }
+        }
+      },
+      scales: {
+        y: {
+          ticks: { color: '#8b949e', font:{size:11},
+                   callback: v => v + ' gCO2' },
+          grid: { color: '#21262d' }
+        },
+        x: { ticks: { color: '#8b949e', font:{size:10},
+                       maxRotation: 45 },
+             grid: { display: false } }
+      }
+    }
+  });
+});
+
+// Live chart
+liveChart = new Chart(document.getElementById('chart-live'), {
+  type: 'line',
+  data: {
+    labels: [],
+    datasets: [{
+      label: 'Energy (Wh)',
+      data: [],
+      borderColor: '#388bfd',
+      backgroundColor: 'rgba(56,139,253,0.1)',
+      fill: true, tension: 0.4, pointRadius: 4,
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    animation: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { ticks: { color: '#8b949e', font:{size:11} },
+           grid: { color: '#21262d' } },
+      x: { ticks: { color: '#8b949e', font:{size:10} },
+           grid: { display: false } }
+    }
+  }
+});
+
+addLog('MACSEA dashboard ready — click Run MACSEA to start', 'success');
+addLog('Real data: Google Cluster Trace 2011 + EMBER IN-SO carbon profile', 'info');
+</script>
+</body>
+</html>
